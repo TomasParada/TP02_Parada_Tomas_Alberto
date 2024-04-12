@@ -15,7 +15,7 @@ public void draw(){
 
 public void keyPressed(){
   if(key == 'a'){
-    println("La presiono");
+    println("La presionó");
     dado.tirarDado();
     background(0);
     dado.dibujar();
@@ -34,7 +34,23 @@ public void keyPressed(){
         textoAmostrar = "dos";
         break;
       }
+      case 3:{
+        textoAmostrar = "tres";
+        break;
+      }
+      case 4:{
+        textoAmostrar = "cuatro";
+        break;
+      }
+      case 5:{
+        textoAmostrar = "cinco";
+        break;
+      }
+      case 6:{
+        textoAmostrar = "seis";
+        break;
+      }
     }
     textSize(40);
-    text(textoAmostrar,100,20);
+    text(textoAmostrar,160,40);
   }

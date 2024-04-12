@@ -26,11 +26,45 @@ class Dado{
         point(this.posicion.x + (this.lado/2) - 20, this.posicion.y - (this.lado/2) + 20);
         break;
       }
+      case 3:{
+        strokeWeight(15);
+        point(this.posicion.x, this.posicion.y);  // Centro
+        point(this.posicion.x - (this.lado/2) + 20, this.posicion.y + (this.lado/2) - 20);  // Esquina superior izquierda
+        point(this.posicion.x + (this.lado/2) - 20, this.posicion.y - (this.lado/2) + 20);  // Esquina inferior derecha
+        break;
+      }
+      case 4: {
+        strokeWeight(15);
+        point(this.posicion.x - (this.lado/2) + 20, this.posicion.y + (this.lado/2) - 20);  // Esquina superior izquierda
+        point(this.posicion.x + (this.lado/2) - 20, this.posicion.y + (this.lado/2) - 20);  // Esquina superior derecha
+        point(this.posicion.x - (this.lado/2) + 20, this.posicion.y - (this.lado/2) + 20);  // Esquina inferior izquierda
+        point(this.posicion.x + (this.lado/2) - 20, this.posicion.y - (this.lado/2) + 20);  // Esquina inferior derecha
+        break;
+      }
+      case 5: {
+        strokeWeight(15);
+        point(this.posicion.x, this.posicion.y);  // Centro
+        point(this.posicion.x - (this.lado/2) + 20, this.posicion.y + (this.lado/2) - 20);  // Esquina superior izquierda
+        point(this.posicion.x + (this.lado/2) - 20, this.posicion.y + (this.lado/2) - 20);  // Esquina superior derecha
+        point(this.posicion.x - (this.lado/2) + 20, this.posicion.y - (this.lado/2) + 20);  // Esquina inferior izquierda
+        point(this.posicion.x + (this.lado/2) - 20, this.posicion.y - (this.lado/2) + 20);  // Esquina inferior derecha
+        break;
+      }
+      case 6: {
+        strokeWeight(15);
+        point(this.posicion.x - (this.lado/2) + 20, this.posicion.y + (this.lado/3));  // Superior izquierda
+        point(this.posicion.x + (this.lado/2) - 20, this.posicion.y + (this.lado/3));  // Superior derecha
+        point(this.posicion.x - (this.lado/2) + 20, this.posicion.y);  // Centro izquierda
+        point(this.posicion.x + (this.lado/2) - 20, this.posicion.y);  // Centro derecha
+        point(this.posicion.x - (this.lado/2) + 20, this.posicion.y - (this.lado/3));  // Inferior izquierda
+        point(this.posicion.x + (this.lado/2) - 20, this.posicion.y - (this.lado/3));  // Inferior derecha
+        break;
+        }
     }
   }
 
   public void tirarDado(){
-    this.valor = int (random(1,3));
+    this.valor = int (random(1,7));
   }
 
 
