@@ -1,0 +1,1 @@
+Presione la tecla "a" para lanzar el dado
