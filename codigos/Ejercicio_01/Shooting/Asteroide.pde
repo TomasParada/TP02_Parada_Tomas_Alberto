@@ -1,42 +1,28 @@
- class Asteroide{
-  PImage imagen;
+class Asteroide {
   PVector posicion;
-  float altoImagen;
-  float anchoImagen;
   PVector velocidad;
+  float anchoImagen;
+  float altoImagen;
+  PImage imagen;
 
-  public Asteroide(PVector posicion, float anchoImagen, float altoImagen, PVector velocidad){
-    cargarImagen();
+  public Asteroide(PVector posicion, float ancho, float alto, PVector velocidad) {
     this.posicion = posicion;
-    this.anchoImagen = anchoImagen;
-    this.altoImagen = altoImagen;
     this.velocidad = velocidad;
+    this.anchoImagen = ancho;
+    this.altoImagen = alto;
+    imagen = loadImage("asteroide.png");
   }
-  private void cargarImagen(){
-    this.imagen = loadImage("asteroide.png");
-    this.altoImagen = 98.2;
-    this.anchoImagen = 92;
+
+  public void mover() {
+    posicion.add(velocidad);
+    if (posicion.y > height) {
+      posicion.y = 0;
+      posicion.x = random(width);
+    }
   }
-  public void dibujar(){
+
+  public void dibujar() {
     imageMode(CENTER);
-    image(imagen, this.posicion.x, this.posicion.y, anchoImagen, altoImagen);
-  }
-  
-  public void mover(){
-    if(this.posicion.y > height){
-      this.posicion.y = 0;
-    }
-    if(this.posicion.x > width){
-      this.posicion.x = 0;
-    }
-    if(this.posicion.x < 0){
-      this.posicion.x = width;
-    }
-    if(this.posicion.y < 0){
-      this.posicion.y = height;
-    }
-  
-    this.posicion.y += this.velocidad.y;
-    this.posicion.x += this.velocidad.x;
+    image(imagen, posicion.x, posicion.y, anchoImagen, altoImagen);
   }
 }
