@@ -3,8 +3,6 @@ Asteroide[] asteroides;
 
 public void setup(){
   size(800,800);
-  //nave1 = Shooter();
-  //nave1.posicion = new PVector(100,100);
   PVector posicionInicial = new PVector(width/2, height-98.2);
   PVector velocidad = new PVector(5,0);
   nave2 = new Shooter(posicionInicial, 92., 98.2, velocidad);
