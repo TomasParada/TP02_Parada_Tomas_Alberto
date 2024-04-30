@@ -1,4 +1,5 @@
 private Dado dado;
+int cont = 0;
 
 public void setup(){
   size(400,400);
@@ -15,11 +16,12 @@ public void draw(){
 
 public void keyPressed(){
   if(key == 'a'){
-    println("La presionó");
+    println("Tirada de dado N°",cont);
     dado.tirarDado();
     background(0);
     dado.dibujar();
     mostrarValor();
+    cont++;
   }
 }
   

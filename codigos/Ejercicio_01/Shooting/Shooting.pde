@@ -6,7 +6,7 @@ public void setup() {
   PVector posicionInicial = new PVector(width / 2, height / 2);
   nave2 = new Shooter(posicionInicial, 92, 98.2);
 
-  asteroides = new Asteroide[5];
+  asteroides = new Asteroide[10];
   for (int i = 0; i < asteroides.length; i++) {
     asteroides[i] = generateAsteroide();
   }
