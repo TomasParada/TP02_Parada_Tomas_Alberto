@@ -34,7 +34,7 @@ void draw() {
 void manejarTroncos() {
   int tiempoActual = millis();
   if (tiempoActual - tiempoUltimoTronco > 2000) {
-    float[] posicionesY = {70,150};
+    float[] posicionesY = {70,160};
     int indexY = int(random(posicionesY.length));
     float posY = posicionesY[indexY];
     float posX = -150;
@@ -64,7 +64,7 @@ void manejarTortugas() {
     float posX = width + 100;
     float velocidad = -2;
 
-    Tortuga nuevaTortuga = new Tortuga(imgTortuga, posX, posY, velocidad, 100, 30);
+    Tortuga nuevaTortuga = new Tortuga(imgTortuga, posX, posY, velocidad, 90, 40);
     tortugas.add(nuevaTortuga);
     tiempoUltimaTortuga = tiempoActual;
   }
@@ -87,7 +87,7 @@ void manejarAutos() {
     float posX = width + 100;
     float velocidad = -2;
 
-    Auto nuevoAuto = new Auto(imgAuto, posX, posY, velocidad, 100, 30);
+    Auto nuevoAuto = new Auto(imgAuto, posX, posY, velocidad, 100, 40);
     autos.add(nuevoAuto);
     tiempoUltimoAuto = tiempoActual;
   }
@@ -109,7 +109,7 @@ void manejarAutos2() {
     float posX = -150;
     float velocidad = 2;
 
-    Auto nuevoAuto = new Auto(imgAuto2, posX, posY, velocidad, 100, 30);
+    Auto nuevoAuto = new Auto(imgAuto2, posX, posY, velocidad, 100, 40);
     autos.add(nuevoAuto);
     tiempoUltimoAuto2 = tiempoActual;
   }
