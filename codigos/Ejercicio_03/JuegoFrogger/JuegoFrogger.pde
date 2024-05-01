@@ -96,7 +96,6 @@ void manejarAutos() {
     auto.mover();
     auto.display();
     if (auto.posicion.x < -150) {
-     // tortugas.remove(tortuga); //comentado por el error ConcurrentModificationException
     }
   }
 }
@@ -119,7 +118,6 @@ void manejarAutos2() {
     auto.mover();
     auto.display();
     if (auto.posicion.x > width + 150) {
-     // tortugas.remove(tortuga); //comentado por el error ConcurrentModificationException
     }
   }
 }
